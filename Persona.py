@@ -2,23 +2,26 @@ import random
 
 
 class Persona:
-
-    male_name = ["seba", "fabri", "freddy", "pol", "diego"]
-    female_name = ["helen", "camila", "luciana", "daniela", "paula"]
+    male_name = ["seba", "fabri", "freddy", "pol", "diego", "marco", "bruno", "favio", "pedro", "pablo", "jimmy",
+                 "juan", "robert"]
+    female_name = ["helen", "camila", "luciana", "daniela", "paula", "maria", "abril", "ana", "lilian", "marta",
+                   "nicole", "carla", "lizzy"]
 
     x = int()
     y = int()
     time = int()
     posicion_baile = int()
     # 0 = bailando ; >0 = en cola
-    cola = str()
+    nombre = str()
+    pareja = int()
 
     def __init__(self, a, condicion):
-        self.time = random.randint(1, 10)
+        self.time = random.randint(2, 10)
+        self.pareja = a
         if condicion:
-            self.cola = self.male_name[a-1]
+            self.nombre = self.male_name[a - 1]
         else:
-            self.cola = self.female_name[a-1]
+            self.nombre = self.female_name[a - 1]
         # self.canvas = canvas
         # true va a ser hombre
         if condicion:
@@ -54,4 +57,4 @@ class Persona:
         self.time -= 1
 
     def reiniciartiempo(self):
-        self.time = random.randint(1, 10)
+        self.time = random.randint(2, 10)
