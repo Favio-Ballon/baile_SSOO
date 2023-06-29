@@ -70,9 +70,9 @@ class SampleApp(tk.Tk):
                              text="Bailar",
                              command=lambda: [self.click()],
                              font=("Comic Sans", 30),
-                             fg="#00FF00",
+                             fg="#ff0080",
                              bg="black",
-                             activeforeground="#00FF00",
+                             activeforeground="#ff0080",
                              activebackground="black")
 
         self.button.place(x=250, y=250)
